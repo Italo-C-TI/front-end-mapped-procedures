@@ -31,6 +31,8 @@ services:
   mapped-procedures-front-end: 
     container_name: mapped-procedures-front-end
     image: sitalo/mapped-procedures-front
+    environment:
+      BACKEND_URL: 'http://mapped-procedures-back-end:3000'
     ports:
       - 3001:3001
     depends_on:

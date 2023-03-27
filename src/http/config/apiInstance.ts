@@ -1,10 +1,9 @@
 import axios from 'axios';
 
-const basesUrl = ["http://localhost:3000"]
-const [localBaseUrl] = basesUrl;
+const basesUrl = process.env.BACKEND_URL || "http://localhost:3000";
 
 const baseConfig = {
-    baseURL: `${localBaseUrl}`,
+    baseURL: `${basesUrl}`,
     timeout: 10000,
 };
 
